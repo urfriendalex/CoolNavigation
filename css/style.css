@@ -104,7 +104,7 @@ h1 {
 }
 
 .nav .menu ul li:hover .tag, .media li:hover{
-    color: lawngreen;
+    color: rgb(26, 26, 26);
     transition: 1s;
 }
 .sec-name {
