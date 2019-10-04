@@ -36,14 +36,6 @@ h1 {
     height: 100vh;
     z-index: 1;
 }
-.toggle-btn{
-    text-align: center;
-    margin-top: 2em;
-}
-.toggle-btn ion-icon{
-    font-size: 3rem;
-    color: white;
-}
 .nav .menu{
     position: absolute;
     width: 0;
@@ -147,6 +139,63 @@ h1 {
     display: none;
 }
 
+.toggle-btn {
+    margin: 2em 3em;
+    cursor: pointer;
+    z-index: 11;
+  }
+  
+.toggle-btn span {
+    display: block;
+    background: white;
+    color: white;
+    height: 2px;
+    border-radius: 1px;
+    margin: 10px 0 8px 0;
+    transition: all 0.3s ease-in;
+  }
+  
+  .toggle-btn span:nth-of-type(1) {
+    width: 36px;
+  }
+  .toggle-btn span:nth-of-type(2) {
+    width: 26px;
+  }
+  .toggle-btn span:nth-of-type(3) {
+    width: 20px;
+  }
+  
+  .toggle-btn:hover:not(.active) span:nth-of-type(1) {
+    margin-bottom: 10px;
+    border: 0;
+  }
+  
+  .toggle-btn:hover:not(.active) span:nth-of-type(2) {
+    border: 1px solid white;
+    margin: 0 13px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .toggle-btn:hover:not(.active) span:nth-of-type(3) {
+    margin-top: 10px;
+    width: 36px;
+    border: 0;
+  }
+  
+  .toggle-btn.active span:nth-of-type(1) {
+    opacity: 0;
+    margin: 0%
+  }
+  .toggle-btn.active span:nth-of-type(3) {
+    opacity: 0;
+    margin: 0%;
+  }
+
+  .toggle-btn.active span:nth-of-type(2) {
+    display: none;
+  }
+
 @media (max-width: 768px) {
     .images{
         display: none;
@@ -163,12 +212,7 @@ h1 {
         width: 20%;
     }
     .toggle-btn {
-        position: absolute;
-        -webkit-transform: translate(-50%, -90%);
-        -moz-transform: translate(-50%, -90%);
-        -ms-transform: translate(-50%, -90%);
-        -o-transform: translate(-50%, -90%);
-        transform: translate(-50%, -90%);
+        margin-left: 20%;
     }
     .menu li .sec-name {
         font-size: 18px;
@@ -181,5 +225,9 @@ h1 {
     }
     .media{
         display: none;
+    }
+    h1{
+        text-align: center;
+        font-size: 1.2rem;
     }
 }
